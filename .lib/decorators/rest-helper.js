@@ -1,13 +1,5 @@
-import { reflections } from "./reflect-keys";
+import { reflections } from "../constants/reflect-keys";
 
-export const HttpMethod = {
-    GET: 'get',
-    PUT: 'put',
-    POST: 'post',
-    DELETE: 'delete',
-    OPTIONS: 'options',
-    HEAD: 'head'
-};
 
 /**
  * 

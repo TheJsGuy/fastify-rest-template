@@ -1,16 +1,27 @@
-const { HttpMethod, RestController, RestHandler } = require('../decorators/rest-helper');
+import { Inject } from '../../.lib';
+
+const { HttpMethod, RestController, RestHandler } = require('../../.lib');
 
 
 
 @RestController('/app-utils')
 export class AppUtilsController {
+
+    @Inject('sampleService')
+    sampleService;
+
     constructor() {
     }
 
-    @RestHandler('', HttpMethod.GET)
+    @RestHandler('/isActive', HttpMethod.GET)
     isActive = async () => {
+        return this.sampleService.isActive();
+    };
+
+    @RestHandler('/serverTime', HttpMethod.GET)
+    getServerTime = async () => {
         return {
-            isWorking: true
+            time: new Date().getTime()
         };
     };
 }
