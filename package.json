@@ -8,7 +8,7 @@
     "start": "node .bin/server.js"
   },
   "dependencies": {
-    "fastify": "^2.14.1",
+    "fastify": "^2.15.1",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
